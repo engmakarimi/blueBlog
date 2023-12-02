@@ -13,14 +13,11 @@ export class HttpService {
     return this.http.get<TResponse>(`${this.baseurl}/${url}/${id}`);
   }
   getList(url: string, query?: string): Observable<any> {
-    const options = query
-      ? { params: new HttpParams().set('title_like', query) }
-      : {};
-    return this.http.get<any>(`${this.baseurl}/${url}`, options);
+    return this.http.get<any>(`${this.baseurl}/${url}`);
   }
   getSearchList(url: string, query?: string): Observable<any> {
     const options = query
-      ? { params: new HttpParams().set('title', query) }
+      ? { params: new HttpParams().set('title_like', query) }
       : {};
     return this.http.get<any>(`${this.baseurl}/${url}`, options);
   }
