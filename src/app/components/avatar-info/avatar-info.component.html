@@ -1,0 +1,8 @@
+<ng-container *ngIf="user">
+  <img class="image profile__img" [src]="user.profileUrl" />
+  <div class="profile__content">
+  <span class="profile__info">{{ user.userName }}</span>
+  <span *ngIf="date" class="vertical-line profile__seperator"></span>
+  <span class="profile__info">{{ date | date : "fullDate" }}</span>
+</div>
+</ng-container>

@@ -1,0 +1,14 @@
+.vertical-line {
+    width: 2px;
+    height: 1.5rem;
+    background-color: $color-stork;
+    margin-top: 4px;
+}
+
+.image {
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+}

@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url('/assets/fonts/cabin/Cabin-Regular.woff2') format('woff2'),
+    url('/assets/fonts/cabin/Cabin-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mulish';
+  src: url('/assets/fonts/mulish/Mulish-ExtraLight.woff2') format('woff2'),
+    url('/assets/fonts/mulish/Mulish-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  font-family: "Mulish";
+}

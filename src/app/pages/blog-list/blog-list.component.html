@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="container list__container">
+  <section class="list__header">
+    <div class="list__header__content">
+      <h1 class="heading-primary">Blog posts</h1>
+      <h4 class="heading-tertiary list__header__subtitle ">
+        Our latest updates and blogs about managing your team
+      </h4>
+      <div>
+        <input class="input__secondary" type="text" placeholder="Search"  [formControl]="search"/>
+      </div>
+    </div>
+    <div class="list__header__btn">
+      <button class="btn btn__secondary" routerLink="add">Add post</button>
+    </div>
+  </section>
+  <div class="list__main">
+    <div class="card__box" *ngFor="let item of blogs">
+      <app-card [blog]="item" [routerLink]="''+item.id"></app-card>
+    </div>
+  </div>
+  <div class="list__footer">
+    <button class="btn btn__secondary">Next &#10095;</button>
+  </div>
+</div>

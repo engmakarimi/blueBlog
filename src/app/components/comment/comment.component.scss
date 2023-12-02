@@ -1,0 +1,13 @@
+@import 'src/assets/scss/theme/variables';
+
+:host{
+    display: block;
+
+    .box__comment {
+        margin: $spacer-s;
+        min-height: fit-content;
+        padding: 1rem;
+        width: 100%;
+        border: 1px solid $color-stork;
+    }
+}

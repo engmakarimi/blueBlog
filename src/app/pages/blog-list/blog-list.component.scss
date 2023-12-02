@@ -1,0 +1,62 @@
+@import 'src/assets/scss/theme/variables';
+
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $color-light;
+    min-height: inherit;
+    padding-bottom: $spacer-s;
+
+    .list {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        &__header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &__subtitle {
+                padding: $spacer-s 0;
+            }
+
+        }
+
+        &__main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+            grid-row-gap: $spacer-md;
+            grid-column-gap: $spacer-s;
+
+            padding: $spacer-md 0 $spacer-s 0;
+        }
+
+        &__footer {
+            align-self: center;
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            &__header {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+
+                &__content {
+                    width: 100%;
+                }
+
+                &__btn {
+                    width: 100%;
+                    padding-top: $spacer-md;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@import 'src/assets/scss/theme/variables';
+
+:host {
+    display: block;
+    height: 10%;
+    width: 100%;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100%;
+        padding: .5rem $spacer-xs $spacer-xs 0;
+
+        &__right {
+            display: flex;
+
+            .nav {
+                padding-right: $spacer-xs;
+                margin: auto;
+
+                &__link {
+                    display: inline-block;
+                    padding: 0 $spacer-xs;
+                    font-size: 1.6rem;
+                    font-weight: 900;
+                    color: $color-grey;
+                }
+
+            }
+
+            @media only screen and (max-width: $bp-medium) {
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+                align-items: flex-end;
+                padding-top: $spacer-xs;
+
+                .nav {
+                    width: 100%;
+                    padding-top: $spacer-s;
+                }
+                .nav__link {
+                    padding: 0 .5rem;
+                    font-size: 1.2rem;
+                }
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                .nav {
+                    display: none;
+                }
+            }
+        }
+
+        &__left {
+            .logo {
+                &__text {
+                    font-size: 4.8rem;
+                    font-weight: 900;
+                }
+            }
+        }
+    }
+
+    background-color:transparent;
+}

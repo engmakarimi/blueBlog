@@ -1,0 +1,100 @@
+@import 'src/assets/scss/theme/variables';
+
+:host {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: $color-white;
+
+    .article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 $spacer-md;
+
+        &__content {
+            padding: $spacer-md $spacer-lg*4;
+            text-align: justify;
+
+            &__profile {
+                margin: $spacer-xl 0;
+            }
+        }
+
+        &__comments {
+            padding-top: $spacer-xl;
+            border-top: 1px solid $color-stork;
+            border-bottom: 1px solid $color-stork;
+
+            &__input {
+                display: flex;
+                align-items: flex-start;
+                padding-top: $spacer-s;
+
+                img {
+                    margin-right: $spacer-s;
+                }
+            }
+
+            &__action {
+                margin: $spacer-s;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+
+            &__content {
+                padding: $spacer-md $spacer-md;
+                width: 100%;
+            }
+        }
+    }
+
+    .header {
+        padding: 0 $spacer-xl*2;
+        text-align: left;
+
+        &__content {
+            padding: $spacer-xl;
+            padding-bottom: $spacer-md;
+
+            &__text {
+                padding-bottom: $spacer-md;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            aspect-ratio: 2.5;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            padding: 0 $spacer-xl;
+
+            &__content {
+                padding: $spacer-s 0;
+            }
+        }
+
+    }
+
+    .load__more {
+        padding: $spacer-xl 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__btn {
+            align-self: center;
+            margin-bottom: $spacer-s;
+        }
+    }
+
+    .comment__box {
+        width: 100%;
+    }
+}

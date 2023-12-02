@@ -1,0 +1,28 @@
+// Theme Scss
+@import 'theme/variables';
+@import 'theme/font';
+@import 'theme/typography';
+@import 'theme/utilites';
+@import 'theme/buttons';
+@import 'theme/form';
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is 10px
+    font-size: 62.5%;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 50%;
+    }
+}
+
+body {
+    box-sizing: border-box;
+}

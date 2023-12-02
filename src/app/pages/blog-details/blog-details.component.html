@@ -1,0 +1,52 @@
+<app-header></app-header>
+<div class="container article">
+  <div class="header">
+    <div class="header__content">
+      <h1 class="heading-primary header__content__text">{{ blog.title }}</h1>
+      <app-avatar-info
+        [date]="blog.creationDate"
+        [user]="blog.author"
+      ></app-avatar-info>
+    </div>
+    <img class="header__img" [src]="blog.imageUrl" />
+  </div>
+  <article class="article__content">
+    <p class="paragraph-1">
+      {{ blog.mainText }}
+    </p>
+    <div class="article__content__profile">
+      <app-avatar-written [user]="blog.author"></app-avatar-written>
+    </div>
+    <section class="article__comments">
+      <h3 class="heading-quaternary">Join the conversation</h3>
+      <div class="article__comments__input">
+        <img class="image" alt="user profile" [src]="user.profileUrl" />
+        <textarea
+          [formControl]="comment"
+          class="input__tertiary"
+          rows="5"
+          cols="50"
+        ></textarea>
+      </div>
+      <div class="article__comments__action">
+        <button class="btn btn__primary" type="button" (click)="submit()">
+          Add Comment
+        </button>
+      </div>
+    </section>
+    <section class="load__more">
+      <button
+        class="btn btn__secondary load__more__btn"
+        type="button"
+        (click)="loadMore = !loadMore"
+      >
+        {{ loadMore ? "Hid comments" : "Load more comments" }}
+      </button>
+      <ng-container *ngIf="loadMore">
+        <div class="comment__box">
+          <app-comment [comments]="blog.comments"></app-comment>
+        </div>
+      </ng-container>
+    </section>
+  </article>
+</div>

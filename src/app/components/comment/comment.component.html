@@ -1,0 +1,6 @@
+<div class="box" *ngFor="let item of comments | slice : 0 : 5">
+  <app-avatar-info [user]="item.user"></app-avatar-info>
+  <div class="box__comment" *ngIf="item">
+    <p class="paragraph-1">{{ item.comment }}</p>
+  </div>
+</div>

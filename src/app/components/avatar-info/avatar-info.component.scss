@@ -1,0 +1,43 @@
+@import 'src/assets/scss/theme/variables';
+
+:host {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        .profile__content {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .profile__info {
+                line-height: 0;
+            }
+
+            padding-left: $spacer-xs;
+        }
+
+        .profile__seperator {
+            display: none;
+            visibility: hidden;
+        }
+
+    }
+
+    .profile {
+        &__img {
+            margin-right: $spacer-xs;
+        }
+
+        &__info {
+            color: $color-grey;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        &__seperator {
+            display: inline-block;
+            margin-right: $spacer-s;
+            margin-left: $spacer-s;
+        }
+    }
+}

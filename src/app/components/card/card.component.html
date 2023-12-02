@@ -1,0 +1,12 @@
+<ng-container *ngIf="blog"></ng-container>
+<img class="card__img" [src]="blog.imageUrl" />
+<div class="card__content">
+  <h3 class="heading-secondary">{{ blog.title }}</h3>
+  <p class="paragraph-2 card__content__text">
+    {{ blog.shortText }}
+  </p>
+  <app-avatar-info
+    [user]="blog.author"
+    [date]="blog.creationDate"
+  ></app-avatar-info>
+</div>

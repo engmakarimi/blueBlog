@@ -1,0 +1,166 @@
+@import 'src/assets/scss/theme/variables';
+
+:host {
+    display: block;
+    background-color: $color-blue-dark;
+    color: $color-white;
+    padding-top: $spacer-s;
+    padding-bottom: $spacer-md;
+    font-size: 1.4rem;
+
+    .footer {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+        &__subscribe {
+            .input {
+                &__box {
+                    position: relative;
+                    width:fit-content;
+                    input::content{
+                     padding-right: 4.2rem;
+                    }
+                }
+
+                &__arrow {
+                    color: $color-blue;
+                    position: absolute;
+                    right: $spacer-xs;
+                    font-size: 3rem;
+                    font-weight: 800;
+                    cursor: pointer;
+                }
+               
+            }
+
+            &__text {
+                font-size: 1.8rem;
+                margin-bottom: $spacer-s;
+            }
+        }
+
+        &__social {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+
+        }
+
+        &__links {
+            display: flex;
+            flex: 4;
+            padding: 0 11rem;
+
+            &__box {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+            }
+        }
+
+        &__link {
+            font-size: 1.4rem;
+            text-decoration: none;
+            line-height: 2.5;
+        }
+
+        @media only screen and (max-width: $bp-largest) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+
+            &__social {
+                flex-direction: row;
+                align-items: center;
+                width: 100%;
+
+                .footer__link {
+                    margin: 0 $spacer-xs;
+                }
+
+                .box__header {
+                    margin-right: $spacer-md;
+                }
+            }
+
+            &__links {
+                width: 100%;
+                padding: $spacer-md 0;
+            }
+
+            &__subscribe {
+                width: 100%;
+            }
+
+        }
+
+        @media only screen and (max-width: $bp-large) {
+            &__social {
+                .footer__link {
+                    font-size: 1.1rem;
+                    margin: 0 .5rem;
+                }
+
+                .box__header {
+                    margin-right: $spacer-s;
+                }
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            &__social {
+                .social-icon+span {
+                    display: none;
+                }
+            }
+
+            .footer__link {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            &__links {
+                flex-direction: column;
+
+                &__box {
+                    &:not(:last-child) {
+                        padding-top: $spacer-s;
+                    }
+                }
+            }
+
+            .footer__link {
+                font-size: 1.4rem;
+            }
+
+        }
+    }
+}
+
+.box__header {
+    padding-bottom: 2.2rem;
+}
+
+.social-icon {
+    width: 1.8rem;
+    height: 1.5rem;
+    fill: $color-white;
+    margin-right: .8rem;
+}
+
+.logo {
+    &__text {
+        font-size: 3rem;
+        font-weight: 900;
+        line-height: 0;
+    }
+
+    &__dot {
+        font-size: 9rem;
+        color: $color-blue;
+        line-height: 0;
+
+    }
+}

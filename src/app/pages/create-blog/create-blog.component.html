@@ -1,0 +1,35 @@
+<app-header></app-header>
+<section class="container form">
+  <h1 class="heading-primary">Create Post</h1>
+  <form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form__item">
+      <label class="paragraph-2">title</label>
+      <input class="input__secondary" formControlName="title" type="text" />
+    </div>
+    <div class="form__item">
+      <label class="paragraph-2">main text</label>
+      <textarea
+        formControlName="mainText"
+        class="input__tertiary"
+        rows="10"
+        cols="50"
+      ></textarea>
+    </div>
+    <div class="form__item">
+      <label class="paragraph-2">short text</label>
+      <input class="input__secondary" formControlName="shortText" />
+    </div>
+    <div class="form__item">
+      <label class="paragraph-2">image url</label>
+      <input class="input__secondary" formControlName="imageUrl" />
+    </div>
+    <div class="form__action">
+      <button class="btn btn__primary form__action__btn" type="submit">
+        Add Post
+      </button>
+      <button class="btn btn__secondary" type="button" (click)="cancel()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</section>

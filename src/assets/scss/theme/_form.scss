@@ -1,0 +1,57 @@
+.input {
+    &__primary {
+        height: 5.6rem;
+        width: 25rem;
+        padding: $spacer-s;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-blue;
+
+        &::placeholder {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $color-blue;
+        }
+        @media only screen and (max-width: $bp-largest) {
+            width: 35rem;
+        }
+    }
+
+    &__secondary {
+        height: 4.4rem;
+        width: 36rem;
+        padding: $spacer-s;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: $color-grey;
+        background-color: $color-blue-off;
+        border: 1px solid $color-blue;
+        border-radius: 4px;
+
+        &::placeholder {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: $color-grey;
+        }
+        @media only screen and (max-width: $bp-medium) {
+            width: 30rem;
+        }
+
+    }
+
+    &__tertiary {
+        padding: $spacer-s;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: $color-grey;
+        border: 1px solid $color-grey-light;
+        border-radius: 4px;
+
+        &::placeholder {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: $color-grey-light;
+        }
+    }
+
+}
